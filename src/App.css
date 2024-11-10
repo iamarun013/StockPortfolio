@@ -1,38 +1,126 @@
+/* src/App.css */
+
+body {
+    font-weight: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+    padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    color: #1f454d;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+    color: #3c8d93;
+    margin-top: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul {
+    width: 50vw;
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: black;
+    margin: 0px 100px 0px 320px;
 }
 
-.App-link {
-  color: #61dafb;
+li,
+.company-Stock-Watchlist {
+    padding: 3px;
+    border-radius: 5px;
+    border-bottom: 1px dashed gray;
+    display: grid;
+    grid-template-columns: 80% 10% 10%;
+    text-align: start;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.company-Stock-Watchlist {
+    color: gray;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    color: #d9d7ca;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    text-decoration: none;
+    background-color: white;
+}
+
+.watchlist {
+    color: green;
+    font-size: 18px;
+    border-radius: none;
+}
+
+button:hover {
+    opacity: 0.6;
+}
+
+
+/* Navigation bar styles */
+
+nav {
+    padding: 13px 0;
+    border-bottom: 2px solid gray;
+}
+
+nav {
+    padding: 13px 0;
+    border-bottom: 1px solid gray;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a.active {
+    padding: 10px 0;
+    border-bottom: 4px solid #00B386;
+    color: #00B386;
+}
+
+nav a:hover {
+    color: #00B386;
+    padding: 10px 0;
+    border-bottom: 4px solid #00B386;
+}
+
+@media only screen and (max-width: 750px) {
+    .App {
+        padding: 10px;
+    }
+    li {
+        grid-template-columns: 70% 20% 10%;
+    }
+    .company-Stock-Watchlist {
+        font-size: 13px;
+        grid-template-columns: 70% 15% 15%;
+    }
+    nav a {
+        margin: 0 10px;
+    }
+    ul {
+        width: 100%;
+        margin: 0px;
+    }
 }
